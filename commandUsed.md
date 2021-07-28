@@ -9,7 +9,7 @@
 - touch commandUsed.md
 - git add commandUsed.md
 - git commit -m "Command-lines"
-- git remote add origin https://github.com/210726-wvu-net-ext/PO-Jorge-Yumiseba.git
+- git remote add master https://github.com/210726-wvu-net-ext/PO-Jorge-Yumiseba.git
 - git push --set-upstream origin master
 - code commandUsed.md
 # Type each step & save
