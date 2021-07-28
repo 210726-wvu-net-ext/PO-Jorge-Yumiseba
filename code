@@ -1,0 +1,4 @@
+#! /usr/bin/bash
+echo "Enter your 3 favorite movies: "
+read movies
+echo "Your 3 favorite movies are: $movies"

@@ -17,5 +17,3 @@
 - git status
 - git commit -m "Step by step command-line"
 - git push origin master
-
-
