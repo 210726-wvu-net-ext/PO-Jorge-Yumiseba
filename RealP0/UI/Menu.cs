@@ -24,17 +24,17 @@ namespace UI
                 Log.Information("We have been initialized");
 
             }
-
-            
+/// <summary>
+/// Welcome to Project 0 where I have realized I love pain and I am very good at it! =D
+/// </summary>          
          public void Start()
             {     
            
-
             bool repeat = true;
             do
             {
                 Console.WriteLine("________________________________");
-                Console.WriteLine("||Hola. Welcome to the jungle!||");
+                Console.WriteLine("||Hello, Welcome to the jungle!||");
                 Console.WriteLine("[1] List of all the restaurants");
                 Console.WriteLine("[2] Search for a restaurant");
                 Console.WriteLine("[3] Add a review");            
@@ -76,7 +76,7 @@ namespace UI
                     break;
 
                     case "99":
-                        Console.WriteLine("You have entered the secret Administrator path...Enter password:");
+                        Console.WriteLine("You have entered into the secret Administrator path...Enter password:");
                         string z = Console.ReadLine();
                         if ( z == "*****")
                         {
@@ -171,12 +171,13 @@ namespace UI
         {
             Console.WriteLine("Select the Restaurant you would like information of or press [0] to go back to the main menu");
                 List<Customer> customers = _resbl.ViewAllUsers(); // same as here
-
-                
-                
+            
                 foreach(Customer cus in customers)
                 {
-                    Console.WriteLine("Name: "+ cus.Name + "--   Last Name: " + cus.LastName);              
+                    Console.WriteLine("Name: "+ cus.Name + "  |  Last Name: " + cus.LastName + "  |  Phone: " + cus.Phone); 
+                    var x = Testing.PhoneDigits(cus.Phone);
+                    Console.WriteLine(Testing.Digits(x));   
+                    Console.WriteLine("---------------------------------");          
                     
                 }
 
@@ -230,9 +231,10 @@ namespace UI
 
             }
 
-
-             private void AddAReview()
+             private void AddAReview() 
              {
+                
+
                 Console.WriteLine("In order to do this you will need to provide additional information. Press 1 if you want to continue");
                 var w=  Console.ReadLine();
                 if ( w != "1" )
@@ -246,7 +248,7 @@ namespace UI
             string a = Console.ReadLine();
             Console.WriteLine("Enter your last name");
             string b = Console.ReadLine();
-            int delta;
+          
 
             
         
@@ -298,7 +300,7 @@ namespace UI
                    Console.WriteLine("Rate this restaurant out of 5 stars: ");
                 rate= Convert.ToInt32(Console.ReadLine());      //  DO TRY CATCH HERE (MEST UP THE INT-DECIMAL)
                }
-               catch(Exception e)
+               catch(Exception )
                {
                 Console.WriteLine("There was an error " );
                 Console.WriteLine("Only Integers Available at the moment");
